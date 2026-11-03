@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+      <a href="#home" class="brand">
+        <span class="brand-symbol">N</span>
+        <span>Nexora</span>
+      </a>
+
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">
+          <span class="nav-icon">⌂</span> Home
+        </a>
+        <a href="#resume" class="nav-link">
+          <span class="nav-icon">▤</span> Resume Builder
+        </a>
+        <a href="#internships" class="nav-link">
+          <span class="nav-icon">⌕</span> Explore Internships
+        </a>
+        <a href="#skills" class="nav-link">
+          <span class="nav-icon">◎</span> Skill Matching
+        </a>
+        <a href="#applications" class="nav-link">
+          <span class="nav-icon">▣</span> Application Tracker
+        </a>
+        <a href="#saved" class="nav-link">
+          <span class="nav-icon">♡</span> Saved Opportunities
+        </a>
+      </nav>
+
+      <div class="sidebar-promo">
+        <span class="rocket">🚀</span>
+        <h3>Your next step matters.</h3>
+        <p>Small progress today can create new opportunities tomorrow.</p>
+        <a href="#internships" class="promo-link">Explore opportunities ↗</a>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">S</div>
+        <div>
+          <strong>Student Account</strong>
+          <small>Nexora Member</small>
+        </div>
+        <span class="profile-dot"></span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="globalSearch" type="search"
+                 placeholder="Search internships, skills..."
+                 aria-label="Search internships and skills">
+          <kbd>⌘ K</kbd>
+        </label>
+
+        <div class="top-actions">
+          <button class="icon-button" id="notificationButton"
+                  aria-label="Notifications" title="Notifications">♧
+            <span class="notification-dot"></span>
+          </button>
+          <div class="top-avatar">S</div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="welcome-pill">✦ Your career journey starts here</span>
+          <h1>Your next<br>begins here.</h1>
+          <p>Build your skills, discover opportunities, and take the next step in your career journey.</p>
+          <a href="#internships" class="primary-button">Explore Internships <span>→</span></a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="floating-icon briefcase">▣</div>
+          <div class="floating-icon graduation">◆</div>
+          <div class="student-illustration">
+            <div class="student-hair"></div>
+            <div class="student-head">
+              <span class="eye eye-left"></span>
+              <span class="eye eye-right"></span>
+              <span class="smile"></span>
+            </div>
+            <div class="student-body">
+              <span class="hoodie-string"></span>
+            </div>
+            <div class="laptop"></div>
+          </div>
+          <span class="sparkle sparkle-one">✦</span>
+          <span class="sparkle sparkle-two">✧</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Your progress">
+        <article class="stat-card">
+          <div class="stat-icon purple-icon">▤</div>
+          <div class="stat-content">
+            <p>Resume Progress</p>
+            <h2>40%</h2>
+            <div class="progress-track"><span style="width:40%"></span></div>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon green-icon">♡</div>
+          <div class="stat-content">
+            <p>Saved Opportunities</p>
+            <h2 id="savedCount">3</h2>
+            <small class="stat-note">Keep your favourites close</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon orange-icon">✓</div>
+          <div class="stat-content">
+            <p>Applications Tracked</p>
+            <h2 id="applicationCount">2</h2>
+            <small class="stat-note">Your journey, one step at a time</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel resume-panel" id="resume">
+          <div class="panel-heading">
+            <span class="heading-icon">✦</span>
+            <h2>Complete your resume</h2>
+          </div>
+          <p>Add more details to make your profile stand out to recruiters.</p>
+          <div class="resume-progress-row">
+            <div class="progress-track large-track"><span style="width:40%"></span></div>
+            <strong>40%</strong>
+          </div>
+          <a href="#resume" class="primary-button small-button" id="resumeButton">Continue Building →</a>
+          <div class="resume-decoration" aria-hidden="true">
+            <div class="paper">
+              <span class="paper-avatar">●</span>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <span class="pencil">✎</span>
+          </div>
+        </article>
+
+        <article class="panel internships-panel" id="internships">
+          <div class="panel-heading panel-heading-between">
+            <div class="heading-group">
+              <span class="heading-icon">▣</span>
+              <h2>Recommended Internships</h2>
+            </div>
+            <a href="#internships" class="text-link" id="viewAllInternships">View all →</a>
+          </div>
+
+          <div class="internship-list" id="internshipList">
+            <article class="internship-row" data-search="google frontend developer web remote">
+              <div class="company-logo google-logo">G</div>
+              <div class="internship-info">
+                <h3>Frontend Developer Intern</h3>
+                <p>Google · Remote</p>
+              </div>
+              <span class="match-badge purple-badge">Top Match</span>
+              <button class="save-button saved" aria-label="Save Frontend Developer Intern" aria-pressed="true">♡</button>
+            </article>
+
+            <article class="internship-row" data-search="microsoft software engineering developer hybrid">
+              <div class="company-logo microsoft-logo"><span></span><span></span><span></span><span></span></div>
+              <div class="internship-info">
+                <h3>Software Engineering Intern</h3>
+                <p>Microsoft · Hybrid</p>
+              </div>
+              <span class="match-badge green-badge">92% Match</span>
+              <button class="save-button" aria-label="Save Software Engineering Intern" aria-pressed="false">♡</button>
+            </article>
+
+            <article class="internship-row" data-search="amazon product design ux ui onsite">
+              <div class="company-logo amazon-logo">a<span>⌣</span></div>
+              <div class="internship-info">
+                <h3>Product Design Intern</h3>
+                <p>Amazon · On-site</p>
+              </div>
+              <span class="match-badge green-badge">85% Match</span>
+              <button class="save-button" aria-label="Save Product Design Intern" aria-pressed="false">♡</button>
+            </article>
+          </div>
+          <p class="empty-state" id="emptySearch" hidden>No matching internships found. Try another search.</p>
+        </article>
+
+        <article class="panel skills-panel" id="skills">
+          <div class="panel-heading panel-heading-between">
+            <div class="heading-group">
+              <span class="heading-icon">◎</span>
+              <h2>Your Skill Snapshot</h2>
+            </div>
+            <a href="#skills" class="text-link" id="skillDetails">View details →</a>
+          </div>
+
+          <div class="skill-row">
+            <span>Frontend Development</span>
+            <div class="progress-track"><span style="width:78%"></span></div>
+            <strong>78%</strong>
+          </div>
+          <div class="skill-row">
+            <span>UI/UX Design</span>
+            <div class="progress-track"><span style="width:65%"></span></div>
+            <strong>65%</strong>
+          </div>
+          <div class="skill-row">
+            <span>Communication</span>
+            <div class="progress-track"><span style="width:85%"></span></div>
+            <strong>85%</strong>
+          </div>
+          <p class="helper-text">Sample skill scores — update them with your own skills.</p>
+        </article>
+
+        <article class="panel applications-panel" id="applications">
+          <div class="panel-heading panel-heading-between">
+            <div class="heading-group">
+              <span class="heading-icon">▤</span>
+              <h2>Application Tracker</h2>
+            </div>
+            <a href="#applications" class="text-link" id="viewApplications">View all →</a>
+          </div>
+
+          <div class="application-row">
+            <div class="company-logo google-logo">G</div>
+            <div class="application-info">
+              <h3>Frontend Developer Intern</h3>
+              <p>Google · Sample application</p>
+            </div>
+            <span class="status-badge applied">Applied</span>
+          </div>
+          <div class="application-row">
+            <div class="company-logo microsoft-logo"><span></span><span></span><span></span><span></span></div>
+            <div class="application-info">
+              <h3>Software Engineering Intern</h3>
+              <p>Microsoft · Sample application</p>
+            </div>
+            <span class="status-badge review">In Review</span>
+          </div>
+        </article>
+
+        <article class="panel saved-panel" id="saved">
+          <div class="panel-heading">
+            <span class="heading-icon">♡</span>
+            <h2>Saved Opportunities</h2>
+          </div>
+          <p>Keep track of roles you want to explore later.</p>
+          <div id="savedSummary" class="saved-summary">
+            <span class="saved-heart">♡</span>
+            <div><strong>3 opportunities</strong><small>Saved for later</small></div>
+          </div>
+          <a href="#internships" class="text-link">Browse internships →</a>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Nexora</span>
+        <span>Your next begins here. ✦</span>
+      </footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
